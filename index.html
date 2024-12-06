@@ -46,4 +46,41 @@
 	<a href="https://www.instagram.com/mannatgroupjhansi/"><img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/E.webp?raw=true" loading="lazy" alt="..." />
    	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/F.webp?raw=true" loading="lazy" alt="..." />
 
+		<div class="slider">
+        <div class="slider-track">
+            <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+            <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+            <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+            <img src="https://via.placeholder.com/800x400?text=Slide+4" alt="Slide 4">
+        </div>
+        <div class="slider-buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const sliderTrack = document.querySelector('.slider-track');
+        const slides = document.querySelectorAll('.slider-track img');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        function updateSlider(offset = 0) {
+            currentIndex = (currentIndex + offset + slides.length) % slides.length;
+            const slideWidth = slides[0].clientWidth;
+            sliderTrack.style.transform = translateX(${-currentIndex * slideWidth}px);
+        }
+
+        nextButton.addEventListener('click', () => updateSlider(1));
+        prevButton.addEventListener('click', () => updateSlider(-1));
+
+        window.addEventListener('resize', () => updateSlider(0));
+
+        // Initialize slider position
+        updateSlider();
+    </script>
+		
+</body>
 </html>
