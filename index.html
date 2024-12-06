@@ -1,57 +1,80 @@
 <!DOCTYPE html>
-<html amp>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Mannat Group</title>
-<meta name="Mannat Group" />
-<meta property="og:title" content="Property Dealer" />
-<meta property="og:description" content="Mannat Group" />
-<meta property="og:image" content="https://github.com/pariflex1/mannat/blob/gh-pages/Image/A.webp?raw=true" />
-<link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider with Offset</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .slider {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-track img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .slider-buttons button {
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/A.webp?raw=true" loading="lazy" alt="..." />
-	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/01.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/02.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/03.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/04.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/05.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/06.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/07.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/08.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/09.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/10.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/11.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/12.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/13.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/14.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/15.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/16.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/17.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/18.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/19.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/20.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/21.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/22.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/23.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/24.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/25.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/26.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/27.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/28.webp?raw=true" loading="lazy" alt="..." />
-
-   	<a href="tel:7905845157"><img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/B.webp?raw=true" loading="lazy" alt="..." />
-	<a href="https://wa.me/917905845157"><img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/C.webp?raw=true" loading="lazy" alt="..." />
-	<a href="https://www.facebook.com/mannatgroupjhansi"><img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/D.webp?raw=true" loading="lazy" alt="..." />	
-	<a href="https://www.instagram.com/mannatgroupjhansi/"><img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/E.webp?raw=true" loading="lazy" alt="..." />
-   	<img src="https://github.com/pariflex1/mannat/blob/gh-pages/Image/F.webp?raw=true" loading="lazy" alt="..." />
-
-		<div class="slider">
+    <div class="slider">
         <div class="slider-track">
-            <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
-            <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
-            <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
-            <img src="https://via.placeholder.com/800x400?text=Slide+4" alt="Slide 4">
+            <img src="01.webp?text=Slide+1" alt="Slide 1">
+            <img src="02.webp?text=Slide+2" alt="Slide 2">
+            <img src="03.webp?text=Slide+3" alt="Slide 3">
+            <img src="04.webp?text=Slide+4" alt="Slide 4">
         </div>
         <div class="slider-buttons">
             <button id="prev">&#10094;</button>
@@ -81,6 +104,5 @@
         // Initialize slider position
         updateSlider();
     </script>
-		
 </body>
 </html>
